@@ -1,4 +1,4 @@
-# io-lab
+# io-lab-zmiana
 
 Mikhail Tarchyla
 
