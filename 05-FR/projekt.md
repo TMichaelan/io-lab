@@ -50,10 +50,12 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
-* ...
+* [UC2](#uc2): Wydanie produktu klientu
 
 [Kupujący](#ac2)
-* ...
+* [BR1](#br1): Zaoferowanie kwoty wyższej niż aktualnie oferowana o minimum 1,00 PLN.
+* [BR2](#br2): Koniec aukcji
+
 
 ---
 <a id="uc1"></a>
@@ -77,19 +79,46 @@ Osoba chcąca zakupić produkt na aukcji.
 ---
 
 <a id="uc2"></a>
-### UC2: ...
+### UC2:  Wydanie produktu klientu
 
 **Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2), ...
 
 **Scenariusz główny:**
-1. ...
+1.  [Kupujący](#ac2) wpisuje adres dostawy
+2.  System wyswietlia adres [Sprzedającemu](#ac1)
+3.  [Sprzedający](#ac1) oddaje przesyłke do firmy kurierskiej na adres [Kupującego](#ac2)
 
 **Scenariusze alternatywne:** 
 
-1.A. ...
-* 4.A.1. ...
+1.A. [Kupujący](#ac2) nie podal adres 
+* 1.A.1. System informuje że trzeba podać adres
+* 1.A.2. Przejdź do kroku 1. 
 
 ---
+
+<a id="uc3"></a>
+### UC3:  Opłata
+
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
+
+**Scenariusz główny:**
+1.  System pokasuję [Kupującemu](#ac2) strone z opłatą na konto [Sprzedającego](#ac1)
+2.  [Kupujący](#ac2) wpisuję dane swojej karty
+3.  System wysyła request na serwer dla potwierdzenia opłaty 
+4.  System wysyła potwierdzenie opłaty [Sprzedającemu](#ac1) i [Kupującemu](#ac2)
+
+**Scenariusze alternatywne:** 
+
+1.A. [Kupujący](#ac2) wpisuję niepoprawne dane karty
+* 1.A.1. System informuje że dane karty są niepoprawne
+* 1.A.2. Przejdź do kroku 2. 
+
+2.A. U [Kupującego](#ac2) nie wystarcza środków na koncie
+* 1.A.1. System informuje że nie wystarcza środków na koncie
+* 1.A.2. Przejdź do kroku 2. 
+
+---
+
 
 ## Obiewkty biznesowe (inaczje obiekty dziedzinowe lub informatycjne)
 
