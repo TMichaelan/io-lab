@@ -149,5 +149,7 @@ Aukcję wygrywa ten z [Kupujący](#ac2)ch, który w momencie jej zakończenia (u
 | Przypadek użycia                                  | Aukcja | Produkt | ... |
 | ------------------------------------------------- | ------ | ------- | --- |
 | UC1: Wystawienia produktu na aukcję               |    C   |    C    | ... |
-| ???                                               |  ...   |  ...    | ... |
+| UC2: Wydanie produktu klientu                     |  ...   |  ...    | ... |
+| UC3: Opłata                    |  ...   |  ...    | ... |
+
 
