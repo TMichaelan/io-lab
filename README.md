@@ -2,6 +2,3 @@
 
 
 #### Mikhail Tarchyla
-
-
-#### 143088
